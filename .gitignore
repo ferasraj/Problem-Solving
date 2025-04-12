@@ -1,2 +1,19 @@
 codewars/8kyu/tempCodeRunnerFile.js
 codewars/7kyu/tempCodeRunnerFile.js
+# تجاهل مجلد node_modules
+node_modules/
+
+# تجاهل ملفات البيئة (لو استخدمتها)
+.env
+
+# تجاهل ملفات الـ log
+*.log
+
+# تجاهل مجلد التثبيت المؤقت
+.npm/
+
+# ممكن تضيف package-lock.json إذا ما تبغى تثبت الإصدارات بالضبط (اختياري)
+# package-lock.json
+package-lock.json
+package.json
+.gitignore

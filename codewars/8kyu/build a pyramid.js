@@ -12,4 +12,16 @@ function printTriangle(height, symbol = "#") {
     console.log(spaces + symbols);
   }
 }
-printTriangle(5, "%");
+printTriangle(5, "o");
+
+function pyramid(pattern, rows, isInverted) {
+  let result = "\n";
+  for (i = 1; i <= rows; i++) {
+    let level = isInverted ? rows - i + 1 : i;
+    result += " ".repeat(rows - level) + pattern.repeat(2 * level - 1) + "\n";
+  }
+  return result;
+}
+
+console.log(pyramid("o", 4, false));
+console.log(pyramid("o", 4, true));
