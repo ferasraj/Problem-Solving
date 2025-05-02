@@ -1,4 +1,4 @@
-isPalindrome = (x) =>
+const isPalindrome = (x) =>
   x.toUpperCase() === x.split("").reverse().join("").toUpperCase()
     ? true
     : false;
