@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/try/style.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      .item-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .item-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        width: 200px;
+      }
+      .favorite-icon {
+        font-size: 1.25rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .filled {
+        color: #d22b2b;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Art Supplies</h1>
+    <ul class="item-list">
+      <li>
+        120 gm paper
+        <button class="favorite-icon">♡</button>
+      </li>
+
+      <li>
+        Watercolor set
+
+        <button class="favorite-icon">♡</button>
+      </li>
+
+      <li>
+        Lead pencil 6B
+
+        <button class="favorite-icon">♡</button>
+      </li>
+    </ul>
+
+    <script>
+      const favoriteIcons = document.querySelectorAll(".favorite-icon");
+      favoriteIcons.forEach((icon) => {
+        icon.addEventListener("click", () => {
+          icon.classList.toggle("filled");
+          if (icon.classList.contains("filled")) {
+            icon.innerHTML = "❤";
+          } else {
+            icon.innerHTML = "♡";
+          }
+        });
+      });
+      // document.querySelectorAll(".favorite-icon").forEach(icon => {
+      //   icon.addEventListener("click", () => {
+      //     const filled = icon.classList.toggle("filled");
+      //     icon.innerHTML = filled ? "❤" : "♡";
+      //   });
+      // });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
